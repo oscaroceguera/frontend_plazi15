@@ -1,0 +1,22 @@
+body {
+	font-family: Arial;
+	font-size: 16px;
+}
+
+
+.Card{
+	background: #C2AC37;
+	border-radius: .5em;
+	border: 5px solid gray;
+	width:200px;
+}
+
+.Card-description{
+	background: white;
+	font-size: 12px;
+	padding: 0.5em;
+}
+
+.Card-image{
+	width: 100%;
+}
