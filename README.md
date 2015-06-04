@@ -12,39 +12,50 @@ https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md
 > 
 > 2 - Instalar el paquete de Stylus de manera global
 
-                $ sudo npm install stylus -g
+      $ sudo npm install stylus -g
 > Ayuda de stylus
         
-                $ stylus -h 
+      $ stylus -h 
 > Convertir a css
 
-                $ stylus app.styl
+      $ stylus app.styl
 
 > Comprimir para producción
 
-                $ stylus app.styl -c
+      $ stylus app.styl -c
 > Escuchando los cambios
 
-                $ stylus app.styl -c -w
+      $ stylus app.styl -c -w
+
 > comprimir el archivo en otra carpeta
-        
-                $ stylus -w -c -o ../public/css app.styl
+     
+      $ stylus -w -c -o ../public/css app.styl
+ 
+> Compilar con nib
+      
+      $ stylus -u nib -c -w -o ../public/css app.styl
 
 
 ### Jade
 
 > Instalar Jade
         
-                $ sudo npm install -g jade
+     $ sudo npm install -g jade
 > Compilar jade y comprimir el archivo
         
-                $ jade index.jade
+      $ jade index.jade
 > Compilar jade sin compresion
 
-                $ jade index.jade -P
+      $ jade index.jade -P
                 
 > Exportar el archivo a otra carpeta sin compresion
         
-                $ jade -o ../ -w -P  index.jade
+      $ jade -o ../ -w -P  index.jade
 
 ## 4 Creación del componente layout
+
+## 5 Flex box con layout
+
+> Instalar Nib para prefijos
+
+      $ sudo npm install nib -g
