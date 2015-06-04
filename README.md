@@ -59,3 +59,16 @@ https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md
 > Instalar Nib para prefijos
 
       $ sudo npm install nib -g
+
+## 6 ¿Qué es un API?
+
+API - Application Programming Interface
+
+## 7 Creando un entorno de desarrollo local
+
+> Crear un servidor http server
+
+      $ sudo npm install http-server -g
+
+> Correr el server 
+      $ http-server .
