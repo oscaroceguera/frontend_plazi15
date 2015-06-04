@@ -71,4 +71,23 @@ API - Application Programming Interface
       $ sudo npm install http-server -g
 
 > Correr el server 
+      
       $ http-server .
+
+## 8 AJAX com jQuery
+
+### package.json
+
+~~~
+{
+      "scripts" : {
+            "jade" : "jade --watch --pretty lib/*.jade --out .",
+            "stylus" : "stylus --use nib --compress --watch lib/app.styl --out public/css",
+            "server" : "http-server ."
+      }
+}
+~~~
+
+      $ npm run jade (compilara el jade)
+      $ npm run stylus (compila el stylus)
+      $ npm run server (compila el server)
