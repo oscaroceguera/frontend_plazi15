@@ -92,7 +92,7 @@ API - Application Programming Interface
       $ npm run stylus (compila el stylus)
       $ npm run server (compila el server)
  
-## Promises
+## 9 Promises
 
 ### Funcion Promises 
 
@@ -107,3 +107,15 @@ API - Application Programming Interface
 ~~~
       Promise.all(promises)
 ~~~
+
+## 10 ECMAScript6
+
+### [Babeljs](https://babeljs.io)
+
+> instalar babeljs
+      
+      $ sudo npm install -g babel
+      $ babel --watch
+      $ babel --watch lib --out-dir public
+      ó
+      $ npm run babel (Añadiendo el script a package.json)

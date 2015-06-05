@@ -1,28 +1,29 @@
 var $ = window.jQuery;
+var MarvelApi = window.MarvelApi;
 
-var key = 'apikey=a971e828c065fdbdd0fa57b919638c38'
-var url = 'http://gateway.marvel.com:80/v1/public/series?title=avengers&apikey=a971e828c065fdbdd0fa57b919638c38';
+var key = 'a971e828c065fdbdd0fa57b919638c38'
+var api = new MarvelApi(key)
 
-Promise.resolve($.get(url))
-.then(function(results){
-	var characters = results.data.results[0].characters.items;
-	var promises = []
+api.findSeries('avengers')
+	.then((serie) => {
+		
+		var characters = serie.characters.items;
+		var promises = []
 
-
-	for(var i in characters){
-		var character = characters[i]
-		var characterUrl = character.resourceURI +  '?' + key
-		promises.push(Promise.resolve($.get(characterUrl)))
-	}
-	
-	return Promise.all(promises)
-})
-.then(function(characters){
-	console.log(characters)
-})
-.catch(function(err){
-	debugger;
-	console.log(err)
-})
+		for(let character of characters){
+			let promise = api.getResourceURI(character.resourceURI)
+			promises.push(promise)
+		}
+		
+		return Promise.all(promises)
+	})
+	.then((characters) => {
+		debugger
+		console.log(characters)
+	})
+	.catch((err) => {
+		debugger;
+		console.log(err)
+	})
 
 
