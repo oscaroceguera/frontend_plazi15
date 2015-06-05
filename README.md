@@ -91,3 +91,19 @@ API - Application Programming Interface
       $ npm run jade (compilara el jade)
       $ npm run stylus (compila el stylus)
       $ npm run server (compila el server)
+ 
+## Promises
+
+### Funcion Promises 
+
+> 
+* estados
+* pending
+* resolved
+* rejected
+
+### Consultando todos las promesa
+
+~~~
+      Promise.all(promises)
+~~~
