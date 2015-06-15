@@ -144,5 +144,13 @@ API - Application Programming Interface
             //Object {hulk: "hulk", ironman: "iron man"}
       ~~~
 
+## 12 Templates ECMAScript 6
+
+
+
+
+
+
+
 
 

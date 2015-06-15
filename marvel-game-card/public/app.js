@@ -44,22 +44,34 @@ api.findSeries('avengers').then(function (serie) {
 		return !!character.thumbnail;
 	});
 }).then(function (characters) {
-	// ir por las carta
-	$('.Card').each(function (i, item) {
+	for (var i = 0; i < 5; i++) {
 		var character = characters[i];
-		var $this = $(item);
-		// obtenemos las imagen
-		var $image = $this.find('.Card-image');
-		// obtenemos la descripcion
-		var $description = $this.find('.Card-description');
-		// obtenemos card name
-		var $name = $this.find('.Card-name');
+		var template = renderCharacter(character);
+		var $card = $(template);
+		$('.Battle-player').append($card);
+	}
 
-		$image.attr('src', '' + character.thumbnail.path + '.' + character.thumbnail.extension);
-		$name.text(character.name);
-		$description.text(character.description);
-	});
+	// // ir por las carta
+	// $('.Card').each((i,item) =>{
+	// 	let character = characters[i]
+	// 	let $this = $(item)
+	// 	// obtenemos las imagen
+	// 	let $image = $this.find('.Card-image')
+	// 	// obtenemos la descripcion
+	// 	let $description = $this.find('.Card-description')
+	// 	// obtenemos card name
+	// 	let $name = $this.find('.Card-name')
+
+	// 	$image.attr('src', `${character.thumbnail.path}.${character.thumbnail.extension}`)
+	// 	$name.text(character.name)
+	// 	$description.text(character.description)
+
+	// })
 })['catch'](function (err) {
 	debugger;
 	console.log(err);
 });
+
+function renderCharacter(character) {
+	return '\n\t<div class="Card"> \n\t  <div class="Card-container">\n\t  <h2 class="Card-name">' + character.name + '</h2><img src="' + character.thumbnail.path + '.' + character.thumbnail.extension + '" alt="Wolverine" class="Card-image">\n\t  <div class="Card-description">' + character.description + '</div>\n\t  <div class="Card-attack">500 puntos de ataque</div>\n\t  </div>\n\t  <div class="Card-backface"></div>\n\t</div>';
+}

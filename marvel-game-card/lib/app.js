@@ -21,22 +21,29 @@ api.findSeries('avengers')
 		return characters.filter((character) => !!character.thumbnail)
 	})
 	.then((characters) => {
-		// ir por las carta
-		$('.Card').each((i,item) =>{
+		for(let i = 0; i<5 ; i++){
 			let character = characters[i]
-			let $this = $(item)
-			// obtenemos las imagen
-			let $image = $this.find('.Card-image')
-			// obtenemos la descripcion
-			let $description = $this.find('.Card-description')
-			// obtenemos card name
-			let $name = $this.find('.Card-name')
+			let template = renderCharacter(character)
+			let $card = $(template)
+			$('.Battle-player').append($card)
+		}
 
-			$image.attr('src', `${character.thumbnail.path}.${character.thumbnail.extension}`)
-			$name.text(character.name)
-			$description.text(character.description)
+		// // ir por las carta
+		// $('.Card').each((i,item) =>{
+		// 	let character = characters[i]
+		// 	let $this = $(item)
+		// 	// obtenemos las imagen
+		// 	let $image = $this.find('.Card-image')
+		// 	// obtenemos la descripcion
+		// 	let $description = $this.find('.Card-description')
+		// 	// obtenemos card name
+		// 	let $name = $this.find('.Card-name')
 
-		})
+		// 	$image.attr('src', `${character.thumbnail.path}.${character.thumbnail.extension}`)
+		// 	$name.text(character.name)
+		// 	$description.text(character.description)
+
+		// })
 		
 	})
 	.catch((err) => {
@@ -44,4 +51,16 @@ api.findSeries('avengers')
 		console.log(err)
 	})
 
+function renderCharacter (character) {
+	return `
+	<div class="Card"> 
+	  <div class="Card-container">
+	  <h2 class="Card-name">${character.name}</h2><img src="${character.thumbnail.path}.${character.thumbnail.extension}" alt="Wolverine" class="Card-image">
+	  <div class="Card-description">${character.description}</div>
+	  <div class="Card-attack">500 puntos de ataque</div>
+	  </div>
+	  <div class="Card-backface"></div>
+	</div>`
 
+
+}
