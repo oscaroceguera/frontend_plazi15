@@ -119,3 +119,30 @@ API - Application Programming Interface
       $ babel --watch lib --out-dir public
       ó
       $ npm run babel (Añadiendo el script a package.json)
+
+## 11 Modificar elementos con API Data - Arrow functions - Elipsis CSS - Latencia y Local Storage
+
+### Local Storage
+
+* Base de datos en memoria del navegador
+* Almacena llaves y valores
+* Hasta 5megas
+* Todo se convierte en cadena
+      
+      ~~~
+            localStorage.avengers = ['thor', 'hulk', 'iron man']
+            // 'thor,hulk,iron man'
+            
+            localStorage.actors = [ironman: 'Robert',captainAmerica:'Chris']
+            // '[object object]'
+            
+            // PASAR A JSON
+            localStorage.avenger = JSON.stringify(avenger)
+            // "{"hulk":"hulk","ironman":"iron man"}"
+            
+            JSON.parse(localStorage.avenger)
+            //Object {hulk: "hulk", ironman: "iron man"}
+      ~~~
+
+
+
