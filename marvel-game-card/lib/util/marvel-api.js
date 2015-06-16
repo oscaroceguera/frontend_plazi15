@@ -52,8 +52,24 @@ class MarvelApi {
 			let datos =  res.data.results[0]
 			datos = JSON.stringify(datos)
 			localStorage[url] = datos
-
 			return Promise.resolve(datos)
+		})
+	}
+
+	searchCharacter(name){
+		let url = `${this.baseUrl}/characters?name=${name}&apikey=${this.key}`
+		return new Promise(function(done){
+			$.get(url).done(function(data){
+				done(data)
+			})
+		})
+		.then(function(res){
+			// falsy -> 0 , '' , null, undefined, NaN
+			// !0, !'', !null, !undefined, !NaN -> true
+			if(!res.data.total){
+				return Promise.reject('Ese personaje no es de marvel pendejo')
+			}
+			return res.data.results[0]
 		})
 	}
 

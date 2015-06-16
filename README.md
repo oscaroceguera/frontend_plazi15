@@ -144,7 +144,8 @@ API - Application Programming Interface
             //Object {hulk: "hulk", ironman: "iron man"}
       ~~~
 
-## 12 Templates ECMAScript 6
+## 12 Templates ECMAScript 6 
+## 13 Datos en plantilla usando Promises
 
 
 
