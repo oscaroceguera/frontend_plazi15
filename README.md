@@ -167,9 +167,13 @@ API - Application Programming Interface
          
             // Correr GULP
             $ gulp build
-      
-      
+            
 
+## 16 Live Reload
+      
+      $ sudo npm install --save-dev livereload
+      $ sudo npm install --save-dev watchify
+      $ sudo npm install --save-dev lodash.assign
 
 
 
