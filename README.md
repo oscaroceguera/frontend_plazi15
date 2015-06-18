@@ -175,8 +175,22 @@ API - Application Programming Interface
       $ sudo npm install --save-dev watchify
       $ sudo npm install --save-dev lodash.assign
 
+## 17 NodeJS (Runtime), Instalar NVM, Socket.io
 
+### [nvm](https://github.com/creationix/nvm)
 
+      $ n
+      $ n -h
+
+### Expresjs 
+
+      $ sudo npm install --save express
+      
+
+### Socket.io
+
+      $ sudo npm install socket.io
+      $ sudo npm install socket.io-client
 
 
 

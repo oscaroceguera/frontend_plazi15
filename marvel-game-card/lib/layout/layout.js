@@ -1,5 +1,6 @@
 var $ = require('jquery')
 var page = require('page')
+var Chat = require('../chat/chat')
 
 // esto es posible con browserify
 var homeTemplate = require('./template.jade')
@@ -17,5 +18,7 @@ function restrict (ctx, next) {
 
 function home() {
   console.log('Estoy navegando al home');
-  $('.app-container').html(homeTemplate)
+  $('.app-container').html(homeTemplate())
+
+  var chat = new Chat('.Layout-phases')
 }
