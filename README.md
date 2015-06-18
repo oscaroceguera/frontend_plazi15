@@ -160,6 +160,15 @@ API - Application Programming Interface
       // instalar jade para browserify
       $ sudo npm install jadeify
       
+## 15 GULP
+ 
+            // instalar GULP
+         $ npm install -g gulp
+         
+            // Correr GULP
+            $ gulp build
+      
+      
 
 
 
