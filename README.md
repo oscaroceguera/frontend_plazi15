@@ -146,6 +146,20 @@ API - Application Programming Interface
 
 ## 12 Templates ECMAScript 6 
 ## 13 Datos en plantilla usando Promises
+## 14 Browserify & component Oriented Development
+
+      $ sudo npm install page
+      $ sudo npm install jquery
+            
+      // instalar browserify
+      $ npm install -g browserify
+
+      // instalr babelify
+      $ sudo npm install babelify
+
+      // instalar jade para browserify
+      $ sudo npm install jadeify
+      
 
 
 

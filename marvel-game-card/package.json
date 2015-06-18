@@ -1,8 +1,14 @@
 {
+	"dependencies" :{
+		"page" : "1.6.3",
+		"jquery" : "2.1.4",
+		"browserify" : "9.0.8",
+		"babelify" : "6.1.2",
+		"jadeify" : "4.3.0"
+	},
 	"scripts" : {
-		"jade" : "jade --watch --pretty lib/*.jade --out .",
 		"stylus" : "stylus --use nib --compress --watch lib/app.styl --out public/css",
 		"server" : "http-server .",
-		"babel" : "babel --watch lib --out-dir public"
+		"build" : "browserify -t babelify -t jadeify lib/app.js > public/app.js"
 	}
 }
